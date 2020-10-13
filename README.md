@@ -1,24 +1,47 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Setup
 
-Things you may want to cover:
+### Pre-requisites
 
-* Ruby version
+* Ruby v2.6.3
+* Ruby on Rails v6.0.3.4
 
-* System dependencies
+1. `git clone git@github.com:vshl/notes-app.git`
 
-* Configuration
+2. `cd notes-app`
 
-* Database creation
+3. `bundle install`
 
-* Database initialization
+4. `bin/rails db:setup` 
 
-* How to run the test suite
+    or
 
-* Services (job queues, cache servers, search engines, etc.)
+    `bin/rails db:create`
 
-* Deployment instructions
+    `bin/rails db:migrate`
 
-* ...
+5. `bin/rails s`
+
+6. Launch web browser and open `localhost:3000`
+
+## Features
+
+* Main page is the notes index page
+
+* It lists notes created with the title, body, tags
+
+* Creating a new note, the user can create a note with a title, body and tags
+
+* Title and body are mandatory, the tags are optional
+
+* Tags are browsable and for this assignment, the user can only view and delete
+  tags
+
+* Tags can be updated for each note
+
+* Deleting a tag will disassociate the tag from the note
+
+## Demo
+
+https://involvio-notes-app.herokuapp.com/
