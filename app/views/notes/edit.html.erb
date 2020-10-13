@@ -1,6 +1,17 @@
 <h1>Editing Note</h1>
 
-<%= render 'form', note: @note %>
+<%= form_with(model: @note, url: {action: 'update'}) do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+
+  <%= f.label :body, 'Note' %>
+  <%= f.text_area :body %>
+
+  <%= f.label :tag_list, "Tags (optional)" %>
+  <%= f.text_field :tag_list %>   
+
+  <%= f.submit "Update" %>
+<% end %>
 
 <%= link_to 'Show', @note %> |
 <%= link_to 'Back', notes_path %>

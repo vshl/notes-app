@@ -10,5 +10,12 @@
   <%= @note.body %>
 </p>
 
+<p>
+  Tags:
+  <% @note.tags.each do |tag| %>
+    <%= link_to tag.name, tag_path(tag) %>
+  <% end %>
+</p>
+
 <%= link_to 'Edit', edit_note_path(@note) %> |
 <%= link_to 'Back', notes_path %>
