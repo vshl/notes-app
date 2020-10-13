@@ -1,0 +1,9 @@
+<h1>Notes Tagged with <%= @tag.name %></h1>
+
+<ul>
+  <% @tag.notes.each do |note| %>
+    <li><%= link_to note.title, note_path(note) %></li>
+  <% end %>
+</ul>
+
+<%= link_to 'View All Tags', tags_path %>
