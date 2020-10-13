@@ -33,7 +33,8 @@
 
 * Creating a new note, the user can create a note with a title, body and tags
 
-* Title and body are mandatory, the tags are optional
+* Title and body are mandatory, the tags are optional. The tags are a comma
+  separated list.
 
 * Tags are browsable and for this assignment, the user can only view and delete
   tags
